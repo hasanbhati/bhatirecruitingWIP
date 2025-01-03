@@ -1,0 +1,967 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1482731215275-a1f151646268?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 1rem;
+    background: linear-gradient(to bottom right, #f5f6fa, #dcdde1);
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.skill-card {
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-content {
+    position: absolute;
+    inset: 0;
+    padding: 1.5rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.7)
+    );
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-content i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-content h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Background images for skill cards */
+.skill-card.mason { 
+    background-image: url('media/mason.jpg');
+}
+
+.skill-card.welder { 
+    background-image: url('media/welder.jpg');
+}
+
+.skill-card.constructor { 
+    background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80');
+}
+
+.skill-card.plumber { 
+    background-image: url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&q=80');
+}
+
+.skill-card.electrician { 
+    background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80');
+}
+
+.skill-card.carpenter { 
+    background-image: url('media/carpenter.jpg');
+}
+
+.skill-card.painter { 
+    background-image: url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&q=80');
+}
+
+.skill-card.hvac { 
+    background-image: url('media/HVAC.jpg');
+}
+
+.skill-card.mechanic { 
+    background-image: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80');
+}
+
+.skill-card.operator { 
+    background-image: url('media/heavy.jpg');
+}
+
+/* Add image loading optimization */
+.skill-card {
+    background-color: #2c3e50; /* Fallback color while image loads */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+/* Add loading animation */
+.skill-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: loading 1.5s infinite;
+    display: none;
+}
+
+.skill-card.loading::before {
+    display: block;
+}
+
+@keyframes loading {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .skill-card {
+        height: 180px;
+    }
+    
+    .skill-content i {
+        font-size: 2rem;
+    }
+    
+    .skill-content h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, select, textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    padding: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 3rem 1rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+} 
+
+/* Add these new styles for file upload */
+.file-upload {
+    position: relative;
+    margin: 0.5rem 0;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.file-upload-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-upload-btn:hover {
+    background-color: #2980b9;
+}
+
+.file-name {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Add styles for language switcher */
+.language-switcher {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lang-link {
+    color: #2c3e50;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.lang-link:hover {
+    color: #3498db;
+}
+
+.lang-link.current {
+    color: #3498db;
+    pointer-events: none;
+}
+
+.lang-separator {
+    color: #95a5a6;
+}
+
+/* Update responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+} 
+
+/* Cookie Consent Styles */
+.cookie-consent {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(44, 62, 80, 0.95);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1001;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.cookie-consent.active {
+    bottom: 0;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cookie-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cookie-btn.accept {
+    background-color: #3498db;
+    color: white;
+}
+
+.cookie-btn.decline {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.cookie-btn:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .cookie-consent {
+        flex-direction: column;
+        text-align: center;
+    }
+} 
+
+/* Cookie Management Button */
+.cookie-manage-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cookie-manage-btn:hover {
+    background: #fff;
+    color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+/* Cookie Management Modal */
+.cookie-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1002;
+    justify-content: center;
+    align-items: center;
+}
+
+.cookie-modal.active {
+    display: flex;
+}
+
+.cookie-modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.cookie-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.cookie-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2c3e50;
+}
+
+.cookie-preferences {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cookie-preference-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.cookie-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.cookie-modal-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.cookie-modal-btn.save {
+    background: #3498db;
+    color: white;
+}
+
+.cookie-modal-btn.reset {
+    background: transparent;
+    border: 1px solid #3498db;
+    color: #3498db;
+} 
+
+/* Add loading indicator styles */
+.loading {
+    cursor: wait;
+}
+
+/* Spinning animation for the loading icon */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fa-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Style disabled buttons during loading */
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+} 
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Update responsive styles */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+    }
+} 
+
+/* File upload error/success styles */
+.file-error,
+.file-success {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.file-error {
+    background-color: #ffe6e6;
+    color: #d63031;
+    border: 1px solid #fab1a0;
+}
+
+.file-success {
+    background-color: #e6ffe6;
+    color: #27ae60;
+    border: 1px solid #a8e6cf;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+} 
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Mobile navigation styles */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px; /* Adjust based on your header height */
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 99;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Hamburger animation */
+    .hamburger-menu.active span:first-child {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:last-child {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+} 
+
+/* Language button styles */
+.language-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.language-buttons .lang-link {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.language-buttons .lang-link.current {
+    color: #3498db;
+    font-weight: 600;
+    position: relative;
+}
+
+.language-buttons .lang-link.current::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #3498db;
+    border-radius: 2px;
+}
+
+.language-buttons .lang-link:hover {
+    color: #3498db;
+}
+
+/* Container for all jobs */
+#jobsList {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Grid container for job cards */
+.jobs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Individual job card */
+.job-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.job-card-header {
+    margin-bottom: 1rem;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.company-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.company-name {
+    margin: 0.25rem 0 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.job-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.job-card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.job-category {
+    padding: 0.4rem 0.8rem;
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.view-details-btn {
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.view-details-btn:hover {
+    background: #2980b9;
+}
+
+/* Message for no jobs found */
+.no-jobs {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .jobs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #jobsList {
+        padding: 1rem;
+    }
+    
+    .jobs-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+} 
+
+/* Page transition styles */
+body {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+/* Optional: Add a subtle transform effect */
+main {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+main.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+} 
+
+/* Page transition styles */
+.transition-fade {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.transition-fade.fade-out {
+    opacity: 0;
+    transform: translateY(-4px);
+}
+
+/* Ensure content is always visible by default */
+body {
+    background-color: #f8fafc;  /* Match your site's background color */
+    margin: 0;
+    opacity: 1;
+}
+
+/* Prevent FOUC (Flash of Unstyled Content) */
+.preload * {
+    transition: none !important;
+} 

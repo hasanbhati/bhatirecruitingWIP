@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - Bhati Recruitings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jobs-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <h1>Bhati Recruitings</h1>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" data-translate="nav_home">Home</a>
+                <a href="jobs.html" data-translate="nav_jobs">Jobs</a>
+            </div>
+            <div class="language-buttons">
+                <button class="lang-link" onclick="changeLanguage('en')">English</button>
+                <button class="lang-link" onclick="changeLanguage('hi')">हिन्दी</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Jobs Section -->
+    <main class="jobs-section">
+        <div class="jobs-wrapper">
+            <h1 class="section-title" data-translate="jobs_title">Current Job Openings</h1>
+            
+            <!-- Filters -->
+            <div class="filters-section">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    data-translate-placeholder="search_jobs_placeholder"
+                    placeholder="Search jobs...">
+                
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all" data-translate="filter_all_categories">All Categories</option>
+                </select>
+                
+                <select id="countryFilter" class="filter-select">
+                    <option value="all" data-translate="filter_all_countries">All Countries</option>
+                </select>
+            </div>
+
+            <!-- Jobs Container -->
+            <div class="jobs-content">
+                <!-- Jobs Grid -->
+                <div id="jobsList" class="jobs-grid">
+                    <!-- Jobs will be inserted here by JavaScript -->
+                </div>
+
+                <!-- No Jobs Message -->
+                <div id="noJobsMessage" class="no-jobs-message" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p data-translate="no_jobs_found">No job openings found</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Job Details Modal -->
+    <div id="jobDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="jobDetailsContent">
+                <!-- Job details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-translate="footer_about_title">About Us</h3>
+                <p data-translate="footer_about_text">Bhati Recruitings is a leading recruitment agency specializing in connecting skilled professionals with top employers in the construction and engineering sectors.</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer_contact_title">Contact Us</h3>
+                <p>
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:info@bhatirecruitings.com">info@bhatirecruitings.com</a>
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> 
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer_follow_title">Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer_copyright">&copy; 2024 Bhati Recruitings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+    <script src="jobs.js"></script>
+</body>
+</html> 

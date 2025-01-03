@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhati Recruitings - Connecting Indian Talent with European Opportunities</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <h1>Bhati Recruitings</h1>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" data-translate="nav_home">Home</a>
+                <a href="jobs.html" data-translate="nav_jobs">Jobs</a>
+            </div>
+            <div class="language-buttons">
+                <button class="lang-link" onclick="changeLanguage('en')">English</button>
+                <button class="lang-link" onclick="changeLanguage('hi')">हिन्दी</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-translate="hero_title">Building Bridges Between Indian Talent and European Opportunities</h1>
+            <p data-translate="hero_subtitle">Connecting skilled workers with promising careers across Europe</p>
+            <a href="#contact" class="cta-button" data-translate="hero_cta">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 data-translate="services_title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-hard-hat"></i>
+                <h3 data-translate="job_placement_title">Job Placement</h3>
+                <p data-translate="job_placement_desc">We connect skilled workers with reputable European companies in construction, plumbing, welding, and more.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-passport"></i>
+                <h3 data-translate="visa_assistance_title">Visa Assistance</h3>
+                <p data-translate="visa_assistance_desc">Complete visa support for selected candidates, making your transition to Europe smooth and hassle-free.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-comments"></i>
+                <h3 data-translate="interview_prep_title">Interview Preparation</h3>
+                <p data-translate="interview_prep_desc">Comprehensive interview preparation and guidance to help you succeed.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-user-tie"></i>
+                <h3 data-translate="career_counselling_title">Career Counselling</h3>
+                <p data-translate="career_counselling_desc">Professional guidance to help you choose the right career path and understand European work culture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 data-translate="about_title">About Us</h2>
+            <p data-translate="about_desc">At Bhati Recruitings, we specialize in connecting skilled Indian laborers with promising job opportunities across Europe. Our expertise includes placing:</p>
+            <div class="skills-grid">
+                <div class="skill-card mason" data-bg-image="media/mason.jpg">
+                    <div class="skill-content">
+                        <i class="fas fa-hard-hat"></i>
+                        <h3 data-translate="skill_mason">Masons & Bricklayers</h3>
+                    </div>
+                </div>
+                <div class="skill-card welder">
+                    <div class="skill-content">
+                        <i class="fas fa-fire"></i>
+                        <h3 data-translate="skill_welder">Welders & Metal Workers</h3>
+                    </div>
+                </div>
+                <div class="skill-card constructor">
+                    <div class="skill-content">
+                        <i class="fas fa-hammer"></i>
+                        <h3 data-translate="skill_constructor">Construction Workers</h3>
+                    </div>
+                </div>
+                <div class="skill-card plumber">
+                    <div class="skill-content">
+                        <i class="fas fa-wrench"></i>
+                        <h3 data-translate="skill_plumber">Plumbers & Pipe Fitters</h3>
+                    </div>
+                </div>
+                <div class="skill-card electrician">
+                    <div class="skill-content">
+                        <i class="fas fa-bolt"></i>
+                        <h3 data-translate="skill_electrician">Electricians</h3>
+                    </div>
+                </div>
+                <div class="skill-card carpenter">
+                    <div class="skill-content">
+                        <i class="fas fa-ruler-combined"></i>
+                        <h3 data-translate="skill_carpenter">Carpenters & Joiners</h3>
+                    </div>
+                </div>
+                <div class="skill-card painter">
+                    <div class="skill-content">
+                        <i class="fas fa-paint-roller"></i>
+                        <h3 data-translate="skill_painter">Painters & Decorators</h3>
+                    </div>
+                </div>
+                <div class="skill-card hvac">
+                    <div class="skill-content">
+                        <i class="fas fa-temperature-high"></i>
+                        <h3 data-translate="skill_hvac">HVAC Technicians</h3>
+                    </div>
+                </div>
+                <div class="skill-card mechanic">
+                    <div class="skill-content">
+                        <i class="fas fa-cogs"></i>
+                        <h3 data-translate="skill_mechanic">Industrial Mechanics</h3>
+                    </div>
+                </div>
+                <div class="skill-card operator">
+                    <div class="skill-content">
+                        <i class="fas fa-truck-monster"></i>
+                        <h3 data-translate="skill_operator">Heavy Equipment Operators</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 data-translate="contact_title">Contact Us</h2>
+        <div class="contact-container">
+            <form id="contactForm" enctype="multipart/form-data">
+                <input type="text" 
+                       id="name" 
+                       name="name"
+                       data-translate="form_name"
+                       data-translate-placeholder="form_name_placeholder" 
+                       required>
+                
+                <input type="email" 
+                       id="email" 
+                       name="email"
+                       data-translate="form_email"
+                       data-translate-placeholder="form_email_placeholder" 
+                       required>
+                
+                <input type="tel" 
+                       id="phone" 
+                       name="phone"
+                       data-translate="form_phone"
+                       data-translate-placeholder="form_phone_placeholder" 
+                       required>
+                
+                <select id="trade" name="trade" required>
+                    <option value="" data-translate="form_select_trade">Select Your Interest</option>
+                    <option value="mason" data-translate="form_mason">Mason & Bricklayer</option>
+                    <option value="welder" data-translate="form_welder">Welder & Metal Worker</option>
+                    <option value="constructor" data-translate="form_constructor">Construction Worker</option>
+                    <option value="plumber" data-translate="form_plumber">Plumber & Pipe Fitter</option>
+                    <option value="electrician" data-translate="form_electrician">Electrician</option>
+                    <option value="carpenter" data-translate="form_carpenter">Carpenter & Joiner</option>
+                    <option value="painter" data-translate="form_painter">Painter & Decorator</option>
+                    <option value="hvac" data-translate="form_hvac">HVAC Technician</option>
+                    <option value="mechanic" data-translate="form_mechanic">Industrial Mechanic</option>
+                    <option value="operator" data-translate="form_operator">Heavy Equipment Operator</option>
+                    <option value="other" data-translate="form_other">Other</option>
+                </select>
+                
+                <div class="file-upload">
+                    <button type="button" data-translate="form_cv_label">Upload Your CV (PDF or DOC)</button>
+                    <input type="file" id="cv" accept=".pdf,.doc,.docx">
+                    <span data-translate="form_file_no_file">No file chosen</span>
+                </div>
+                
+                <textarea 
+                    id="message" 
+                    name="message"
+                    data-translate="form_message"
+                    data-translate-placeholder="form_message_placeholder" 
+                    required></textarea>
+                
+                <button type="submit" data-translate="form_submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-translate="company_name">Bhati Recruitings</h3>
+                <p data-translate="footer_tagline">Building careers, connecting cultures.</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer_contact_title">Contact Info</h3>
+                <p data-translate="footer_email">Email: info@bhatirecruitings.com</p>
+                <p data-translate="footer_phone">Phone: +91 XXXXXXXXXX</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer_social_title">Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer_privacy_title">Privacy</h3>
+                <button id="cookieManageBtn" class="cookie-manage-btn" data-translate="cookie_manage">
+                    Manage Cookie Preferences
+                </button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer_copyright">&copy; 2024 Bhati Recruitings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent">
+        <p data-translate="cookie_message">We use cookies to improve your experience. By continuing to use this site, you agree to our use of cookies.</p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn accept" data-translate="cookie_accept">Accept</button>
+            <button class="cookie-btn decline" data-translate="cookie_decline">Decline</button>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

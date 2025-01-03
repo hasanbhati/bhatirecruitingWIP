@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Tool - Bhati Recruitings</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Admin Panel</h1>
+            <a href="index.html" class="secondary-btn" target="_blank">
+                <i class="fas fa-globe"></i> View Website
+            </a>
+        </header>
+
+        <div class="controls-bar">
+            <button id="addJobBtn" class="primary-btn">
+                <i class="fas fa-plus"></i> Add Job Opening
+            </button>
+            <div class="filters-group">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search jobs...">
+                <select id="statusFilter" class="status-filter">
+                    <option value="all">All Status</option>
+                    <option value="active">Active</option>
+                    <option value="draft">Draft</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="jobs-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Job Position</th>
+                        <th>Company</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Category</th>
+                        <th>Posted Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="jobsList">
+                    <!-- Jobs will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add/Edit Job Modal -->
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">Add New Job Opening</h2>
+            
+            <form id="jobForm">
+                <div class="form-group">
+                    <label for="companyName">Company Name*</label>
+                    <input type="text" id="companyName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Company Logo</label>
+                    <div class="logo-input-container">
+                        <button type="button" class="secondary-btn" onclick="document.getElementById('logoFile').click()">
+                            <i class="fas fa-upload"></i> Upload Logo
+                        </button>
+                        <input type="file" id="logoFile" accept="image/*" style="display: none;">
+                        <span>or</span>
+                        <input type="text" id="logoUrl" placeholder="Enter logo URL">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category*</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Construction">Construction</option>
+                        <option value="HVAC">HVAC</option>
+                        <option value="Carpentry">Carpentry</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Welding">Welding</option>
+                        <option value="Painting">Painting</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Job Position*</label>
+                    <input type="text" id="position" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country*</label>
+                        <input type="text" id="country" name="country" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description*</label>
+                    <textarea id="description" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="requirements">Requirements*</label>
+                    <textarea id="requirements" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status*</label>
+                    <select id="status" required>
+                        <option value="active">Active</option>
+                        <option value="draft">Draft</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="danger-btn" id="deleteBtn">Delete Job</button>
+                    <div class="right-buttons">
+                        <button type="button" class="secondary-btn" id="cancelBtn">Cancel</button>
+                        <button type="submit" class="primary-btn">Save Job</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteConfirmModal" class="modal">
+        <div class="modal-content delete-confirm-content">
+            <h2>Delete Job</h2>
+            <p>Are you sure you want to delete this job?</p>
+            <div class="form-actions">
+                <div class="right-buttons">
+                    <button class="secondary-btn" id="cancelDeleteBtn">Cancel</button>
+                    <button class="danger-btn" id="confirmDeleteBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html> 
